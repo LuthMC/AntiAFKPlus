@@ -6,6 +6,6 @@ projects:
   AntiAFKPlus:
     path: ""
     libs:
-      - src: LootSpace369\lsplaceholderapi\PlaceHolderAPI
+      - src: Vasync\lsplaceholderapi\PlaceHolderAPI
         version: ^1.0.2
 ...
