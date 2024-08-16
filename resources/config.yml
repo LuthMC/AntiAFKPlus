@@ -1,0 +1,9 @@
+config_version: "1.0.0" # Don't Change This!
+
+afk_timeout: 5 # Time in minutes
+
+kick_message: "{name} was kicked for being AFK. Current time: {time}"
+# Placeholders:
+# {time} - Replaced with the current server timezone.
+# {name} - Replaced with the player's name.
+# Example: "You were kicked for being AFK at {time}, Player: {name}."
