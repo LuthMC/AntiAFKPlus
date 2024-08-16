@@ -1,0 +1,11 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/LuthMC/AntiAFKPlus
+build-by-default: true
+branches:
+- master
+projects:
+  AntiAFKPlus:
+    path: ""
+    libs:
+      - src: LootSpace369\lsplaceholderapi
+        version: ^1.0.2
+...
