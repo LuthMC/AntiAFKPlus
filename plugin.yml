@@ -1,0 +1,7 @@
+name: AntiAFKPlus
+version: 1.0.0
+api: 5.0.0
+main: Luthfi\AntiAFKPlus\AntiAFKPlus
+description: "A plugin that kicks players for being AFK."
+authors: Luthfi
+depend: [LSPlaceholderAPI]
