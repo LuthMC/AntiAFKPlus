@@ -8,19 +8,19 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\scheduler\Task;
-use LootSpace369\lsplaceholderapi\PlaceHolderAPI;
+use use LootSpace369\lsplaceholderapi\PlaceHolderAPI;;
 
 class AntiAFKPlus extends PluginBase implements Listener {
 
     private array $afkTimes = [];
-    private PlaceholderAPI $placeholderAPI;
+    protected ?PlaceholderAPI $placeholderAPI = null;
     private const CONFIG_VERSION = "1.0.0";
 
     public function onEnable(): void {
         $this->saveDefaultConfig();
         $this->checkConfigVersion();
         $this->placeholderAPI = $this->getServer()->getPluginManager()->getPlugin("LSPlaceholderAPI");
-        if ($this->placeholderAPI === null) {
+        if (!$this->placeholderAPI instanceof PlaceholderAPI) {
             $this->getLogger()->error("LSPlaceholderAPI not found! The plugin will not function correctly.");
             $this->getServer()->getPluginManager()->disablePlugin($this);
             return;
@@ -59,7 +59,7 @@ class AntiAFKPlus extends PluginBase implements Listener {
 
             public function onRun(): void {
                 $currentTime = time();
-                $timezone = date_default_timezone_get();
+                $timezone = date_default_timezone_get(); 
                 foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
                     $lastMoveTime = $this->plugin->afkTimes[$player->getName()] ?? $currentTime;
                     if (($currentTime - $lastMoveTime) >= $this->timeout) {
