@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\scheduler\Task;
-use use LootSpace369\lsplaceholderapi\PlaceHolderAPI;
+use LootSpace369\lsplaceholderapi\PlaceHolderAPI;
 
 class AntiAFKPlus extends PluginBase implements Listener {
 
