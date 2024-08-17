@@ -5,7 +5,4 @@ branches:
 projects:
   AntiAFKPlus:
     path: ""
-    libs:
-      - src: LootSpace369\LSPlaceholderAPI\PlaceHolderAPI
-        version: ^1.0.2
 ...
